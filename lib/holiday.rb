@@ -18,15 +18,15 @@ def second_supply_for_fourth_of_july(holiday_hash)
   #   }
   # }
   # return the second element in the 4th of July array
-  return holiday_hash[:summer][:fourth_of_july][1]
+  holiday_hash[:summer][:fourth_of_july][1]
 end
 
-def add_supply_to_winter_holidays(holiday_hash, supply)
+def add_supply_to_winter_holidays(holiday_hash, item)
   # holiday_hash is identical to the one above
   # add the second argument, which is a supply, to BOTH the
   # Christmas AND the New Year's arrays
   holiday_hash[:winter].each do [holiday, decorations]
-    holiday << supply
+    holiday << item
   end
 end
 
@@ -57,7 +57,7 @@ def all_supplies_in_holidays(holiday_hash)
   # etc.
   holiday_hash.each do |season, holiday|
     holiday.each do |holiday, item|
-      puts " #{holiday.to_s.split("_").map} {|i| i.capitalize.join(" ")}: #{item.join(", ")}"
+
     end
   end
 end
